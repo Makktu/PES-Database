@@ -110,3 +110,9 @@ main {
 .movie:hover .overview {
     transform: translateY(0);
 }
+
+.fadeIn {
+    background-image: url("img/boxart/Goal_Storm_PAL_version_1996.jpg");
+    /* opacity: 1; */
+    transition: 2s ease-out;
+}
