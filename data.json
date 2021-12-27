@@ -1,5 +1,51 @@
-// here is where all the game data goes
-
-// decide on field names
-
-// public and private
+{
+    "contents": "6",
+    "games": [
+        {
+            "name": "Pro Evolution Soccer",
+            "year": "2001",
+            "rating": "7",
+            "wikipedia": "https://en.wikipedia.org/wiki/Pro_Evolution_Soccer_(video_game)",
+            "cover": "img/boxart/ProEvolutionSoccer1.jpg",
+            "summary": "The first of the PlayStation2 series and the beginning of a legend."
+        },
+        {
+            "name": "Pro Evolution Soccer 2",
+            "year": "2002",
+            "rating": "9",
+            "wikipedia": "https://en.wikipedia.org/wiki/Pro_Evolution_Soccer_(video_game)",
+            "cover": "img/boxart/ProEvolutionSoccer2.jpg"
+        },
+        {
+            "name": "Pro Evolution Soccer 3",
+            "shortname": ["PES3", "PES 3"],
+            "year": "2003",
+            "rating": "9",
+            "wikipedia": "https://en.wikipedia.org/wiki/Pro_Evolution_Soccer_(video_game)",
+            "cover": "img/boxart/ProEvolutionSoccer3.jpg"
+        },
+        {
+            "name": "Pro Evolution Soccer 4",
+            "year": "2004",
+            "rating": "8",
+            "wikipedia": "https://en.wikipedia.org/wiki/Pro_Evolution_Soccer_(video_game)",
+            "cover": "img/boxart/ProEvolutionSoccer4.jpg"
+        },
+        {
+            "name": "Pro Evolution Soccer 5",
+            "shortname": ["PES5", "PES 5"],
+            "year": "2005",
+            "rating": "11",
+            "wikipedia": "https://en.wikipedia.org/wiki/Pro_Evolution_Soccer_(video_game)",
+            "cover": "img/boxart/ProEvolutionSoccer5.jpg",
+            "summary": "Without question the greatest football game of all time. Unsurpassable."
+        },
+        {
+            "name": "Pro Evolution Soccer 6",
+            "year": "2006",
+            "rating": "8",
+            "wikipedia": "https://en.wikipedia.org/wiki/Pro_Evolution_Soccer_(video_game)",
+            "cover": "img/boxart/ProEvolutionSoccer6.jpg"
+        }
+    ]
+}

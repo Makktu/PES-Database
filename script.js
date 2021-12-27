@@ -1,31 +1,73 @@
 "use strict";
 
-// import * as data from 'data.json';
-
 // const form = document.getElementById("form");
 // const search = document.getElementById("search");
 
-// const IMG_PATH = "/img/boxart/";
+function showGames(theData, searchTerm) {
+    const contentNumber = theData.contents;
 
-// const games = require("data.json");
+    if (searchTerm) {
+        console.log("this has worked");
+        for (let k = 0; k < contentNumber; k++) {
+            console.log(k);
+        }
 
-// const mainPart = document.querySelector("main");
+        return;
+    }
 
-// const gameEl = document.createElement("div");
+    for (let j = 0; j < contentNumber; j++) {
+        const gameName = theData.games[j].name;
+        const shortName = theData.games[j].shortname[0];
+        const gameYear = theData.games[j].year;
+        const gameRating = theData.games[j].rating;
+        const gameWiki = theData.games[j].wikipedia;
+        const boxArt = theData.games[j].cover;
+        const summary = theData.games[j].summary;
+        console.log(gameName, gameYear, gameRating, gameWiki, boxArt);
+        const gameEl = document.createElement("div");
+        gameEl.classList.add("movie");
+        gameEl.innerHTML = `
+            <img src="${boxArt}
+            " alt="${gameName}">
+            <div class="movie-info">
+          <h3>${gameName}</h3>
+          <span class="${getClassByRate(gameRating)}">${gameRating}</span>
+            </div>
+            <div class="overview">
+          <h3>${shortName}</h3>
+          ${gameYear}<br>${summary}
+        </div>
+        `;
+        mainPart.appendChild(gameEl);
+    }
 
-// const testCase = IMG_PATH + "Goal_Storm_PAL_version_1996.jpg";
+    function getClassByRate(rating) {
+        if (rating > 9) return "green";
+        if (rating >= 8) return "orange";
+        return "red";
+    }
+}
 
-// console.log(testCase);
+fetch("data.json")
+    .then((response) => response.json())
+    .then((json) => {
+        // theData = json;
+        const theData = json;
+        showGames(theData);
+    });
 
-// gameEl.innerHTML = `<p>HELLO WORLD?</p><img src="${testCase}">`;
+const mainPart = document.querySelector("main");
 
-// access JSON of all games and display them on a single page
-// games.forEach((game) => {
-//     // code to do it goes here
-// });
+const gameEl = document.createElement("div");
 
-const el = document.querySelector(".img");
-el.src = "img/boxart/Goal_Storm_PAL_version_1996.jpg";
-el.addEventListener("load", () => {
-    el.classList.add("fadeIn");
+form.addEventListener("submit", (e) => {
+    e.preventDefault();
+    const searchTerm = search.value;
+
+    if (searchTerm && searchTerm !== "") {
+        showGames(null, searchTerm);
+        search.value = "";
+    } else {
+        window.location.reload();
+    }
 });
