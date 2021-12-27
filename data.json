@@ -18,7 +18,7 @@
         },
         {
             "name": "Pro Evolution Soccer 3",
-            "shortname": ["PES3", "PES 3"],
+            "shortname": "PES 3",
             "year": "2003",
             "rating": "9",
             "wikipedia": "https://en.wikipedia.org/wiki/Pro_Evolution_Soccer_(video_game)",
@@ -33,7 +33,7 @@
         },
         {
             "name": "Pro Evolution Soccer 5",
-            "shortname": ["PES5", "PES 5"],
+            "shortname": ["PES 5"],
             "year": "2005",
             "rating": "11",
             "wikipedia": "https://en.wikipedia.org/wiki/Pro_Evolution_Soccer_(video_game)",
