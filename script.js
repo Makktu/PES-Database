@@ -17,7 +17,7 @@ function showGames(theData, searchTerm) {
 
     for (let j = 0; j < contentNumber; j++) {
         const gameName = theData.games[j].name;
-        const shortName = theData.games[j].shortname;
+        const shortName = theData.games[j].shortname[1];
         const gameYear = theData.games[j].year;
         const gameRating = theData.games[j].rating;
         const gameWiki = theData.games[j].wikipedia;
